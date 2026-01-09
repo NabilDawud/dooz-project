@@ -1,4 +1,6 @@
 // Initialize Swipers
+document.addEventListener("DOMContentLoaded", function () {
+
 document.querySelectorAll('.swiper-adv').forEach(swiperEl => {
     new Swiper(swiperEl, {
         loop: true,
@@ -340,3 +342,5 @@ document.querySelectorAll(".doozsmallswiperleft").forEach((el) => {
 //     dooz_main_navbar__inner.classList.toggle("px-md-0");
 //     dooz_main_navbar__inner.classList.toggle("px-lg-0");
 //   })
+
+});
