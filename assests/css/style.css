@@ -1,0 +1,1572 @@
+/* container-md */
+@media (width >=768px) {
+    .container-md {
+        width: 750px;
+    }
+}
+
+@media (width >=992px) {
+    .container-md,.container-lg {
+        width: 970px;
+    }
+}
+
+@media (width >=1200px) {
+    .container-md,.container-lg {
+        width: 1170px;
+    }
+}
+
+
+
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+}
+
+/* =========================
+   DOOZ FLOATING SOCIAL BAR
+========================= */
+
+.dooz-social-bar {
+    position: fixed;
+    top: 50%;
+    left: 15px;
+    /* غيرها لـ right:0 إذا بدك */
+    transform: translateY(-50%);
+    padding: 8px 6px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* الروابط */
+.dooz-social-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    aspect-ratio: 1 / 1;
+    transition: background-color .2s ease, transform .2s ease;
+    text-decoration: none
+}
+
+/* الأيقونات */
+.dooz-social-bar img {
+    border-radius: 5px;
+    width: 32px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    display: block;
+}
+
+/* Hover */
+.dooz-social-bar a:hover {
+    background: rgba(0, 0, 0, .12);
+    transform: translateX(2px);
+}
+
+/* إخفاء على الموبايل (مثل كودك القديم) */
+@media (max-width: 768px) {
+    .dooz-social-bar {
+        display: none;
+    }
+}
+
+
+:root {
+    --header-h-navbarup: 72px;
+    --radius-navbarup: 14px;
+    --border-navbarup: #e7e7e7;
+    --shadow-navbarup: 0 6px 24px rgba(0, 0, 0, .06);
+}
+
+
+
+.navbar-up {
+    background: #fff;
+    border-bottom: 1px solid var(--border-navbarup);
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 170px 1fr 380px;
+    /* logo | slider | like/share */
+    gap: 16px;
+    align-items: start;
+    /* min-height: var(--header-h-navbarup); */
+}
+
+/* Logo */
+.brand {
+    text-decoration: none;
+}
+
+.brand__logo {
+    max-width: 100%;
+    display: block;
+}
+
+/* Slider container-md */
+.ads-wrap {
+    min-width: 0;
+    /* important so slider doesn't overflow */
+}
+
+.adsSwiper {
+    border-radius: var(--radius-navbarup);
+    box-shadow: var(--shadow-navbarup);
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Slide */
+.ads-slide {
+    display: block;
+    aspect-ratio: 540 / 86;
+}
+
+.ads-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Swiper buttons style */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: var(--shadow-navbarup);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Social */
+.social {
+    justify-content: flex-start;
+    /* left side visually */
+    direction: ltr;
+    /* FB plugin is better in ltr */
+}
+
+/* Responsive */
+
+
+@media (width < 1200px) {
+    .header-grid {
+        grid-template-columns: 130px 1fr 350px;
+    }
+}
+
+@media (width < 992px) {
+    .header-grid {
+        grid-template-columns: 150px 1fr;
+    }
+}
+
+
+@media (width < 576px) {
+    .header-grid {
+        grid-template-columns: 110px 1fr;
+    }
+}
+
+/* Modern Navigation */
+/* ================================
+   DOOZ MAIN NAVBAR (ISOLATED)
+    ================================ */
+.dooz-main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9998;
+    background: #fff;
+    min-height: 70px;
+    transition: background-color .2s ease, min-height .2s ease, box-shadow .2s ease;
+}
+
+.dooz-main-navbar.is-scrolled {
+
+    background: #f39200f7;
+    /* اللون الجديد */
+    min-height: 58px;
+    /* أصغر شوي */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .12);
+
+    .dooz-main-navbar__toggler {
+        color: #9acd32;
+        background-color: #111;
+    }
+
+    .dooz-main-navbar__toggler:hover {
+        border-color: #9acd32;
+        scale: 1.04;
+    }
+}
+
+/* inner row */
+.dooz-main-navbar__inner {
+    gap: 8px;
+    align-items: center;
+}
+
+/* ===== TOGGLER ===== */
+.dooz-main-navbar__toggler {
+    border: 1px solid #f39200;
+    border-radius: 6px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #738e1b;
+    transition: .5s;
+}
+
+.dooz-main-navbar__toggler:hover {
+    color: #9acd32;
+    background-color: #111;
+}
+
+.dooz-main-navbar__toggler:focus {
+    box-shadow: none;
+    /* color: #9acd32;
+    background-color: #111; */
+}
+
+
+/* ===== SEARCH ===== */
+.dooz-main-navbar__search {
+    margin: 0;
+}
+
+.dooz-main-navbar__search--desktop {
+    max-width: 260px;
+    margin-inline-start: auto;
+    /* يروح أقصى اليسار */
+}
+
+.dooz-main-navbar__search--mobile {
+    flex: 1;
+}
+
+.dooz-main-navbar__search-group {
+    display: flex;
+    border: 1px solid #f39c12;
+    background-color: #fff;
+    height: 44px;
+    overflow: hidden;
+}
+
+@media (width < 992px) {
+    .dooz-main-navbar__search-group {
+        border-radius: 6px;
+    }
+}
+
+.dooz-main-navbar__search-input {
+    flex: 1;
+    border: 0;
+    padding: 10px 12px;
+}
+
+.dooz-main-navbar__search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dooz-main-navbar__search-btn {
+    border: 0;
+    background: #fff;
+    width: 48px;
+}
+
+/* ===== MENU ===== */
+.navbar-collapse {
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.dooz-main-navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.dooz-main-navbar__menu::-webkit-scrollbar {
+    display: none;
+}
+
+.dooz-main-navbar__link {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    padding: 12px 0;
+    white-space: nowrap;
+    transition: .15s;
+}
+
+.dooz-main-navbar__link:hover {
+    transform: translateY(-1px);
+}
+
+.dooz-main-navbar__link.is-active {
+    background: #111;
+    color: #fff;
+    padding-inline: 18px;
+}
+
+/* ===== MOBILE MENU STYLE (مثل صورتك) ===== */
+@media (width < 992px) {
+    .dooz-main-navbar.is-scrolled {
+        /* padding-bottom: 0; */
+    }
+
+    /* خلي المنيو تحت البار */
+    .navbar-collapse {
+        /* width: calc(100% + 24px); */
+        margin-top: 10px;
+        max-height: 340px;
+        overflow-y: auto;
+        background-color: #fff;
+        margin-inline: -12px;
+        direction: ltr;
+    }
+
+    .dooz-main-navbar__menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 0 18px;
+        gap: 6px;
+        direction: rtl;
+    }
+
+    .dooz-main-navbar__link {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 14px 12px;
+    }
+
+    .dooz-main-navbar__link.is-active {
+        width: min(900px, 92%);
+    }
+}
+
+/* =========================
+   DOOZ BREAKING TICKER
+========================= */
+
+.scrolling-strip {
+    background-color: #a7c41f;
+}
+
+.dooz-breaking-ticker {
+    background: #a7c41f;
+    /* أخضر قريب للصورة */
+    color: #fff;
+    width: 100%;
+}
+
+.dooz-breaking-ticker__inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 14px;
+}
+
+/* الزر الأسود */
+.dooz-breaking-ticker__tag {
+    flex: 0 0 auto;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 2px;
+    /* مربع تقريبًا مثل الصورة */
+    white-space: nowrap;
+}
+
+.dooz-breaking-ticker__tag:hover {
+    background: #000;
+}
+
+/* منطقة الأخبار */
+.dooz-breaking-ticker__track {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* الماركي */
+.dooz-breaking-ticker__marquee {
+    display: flex;
+    width: max-content;
+    gap: 40px;
+    animation: doozTickerMove 22s linear infinite;
+}
+
+/* مجموعتين عشان loop يكون ناعم */
+.dooz-breaking-ticker__group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+
+    span img {
+        width: 30px;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+/* عناصر الأخبار */
+.dooz-breaking-ticker__item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.dooz-breaking-ticker__item:hover {
+    text-decoration: underline;
+}
+
+/* الفاصل */
+.dooz-breaking-ticker__sep {
+    opacity: .85;
+}
+
+/* حركة: من اليمين لليسار (RTL) */
+@keyframes doozTickerMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* إيقاف الحركة عند hover (اختياري لكنه مفيد) */
+.dooz-breaking-ticker__track:hover .dooz-breaking-ticker__marquee {
+    animation-play-state: paused;
+}
+
+/* تحسين للموبايل */
+@media (max-width: 576px) {
+    .dooz-breaking-ticker__item {
+        font-size: 14px;
+    }
+
+    .dooz-breaking-ticker__marquee {
+        animation-duration: 28s;
+    }
+}
+
+/* =========================
+   DOOZ HERO SECTION*/
+
+/* ===== DOOZ HERO ===== */
+
+.dooz-hero {
+    background-color: #a7c41f;
+    /* الأخضر اللي بالخلفية */
+    padding: 16px 0;
+}
+
+.dooz-hero__layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    /* main | side */
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* main */
+.dooz-hero__main {
+    min-width: 0;
+}
+
+/* side grid */
+.dooz-hero-sidegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2x3 = 6 */
+    gap: 4px;
+}
+
+/* cards */
+.dooz-hero-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    border: 3px solid #f39c12;
+    /* البرتقالي */
+    background: #000;
+}
+
+.dooz-hero-card__img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+    opacity: .95;
+}
+
+.dooz-hero-card__title {
+    position: absolute;
+    inset-inline: 10px;
+    bottom: 10px;
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .55);
+    line-height: 1.25;
+}
+
+.dooz-hero-card:hover {
+    transform: translateY(-1px);
+}
+
+/* hero swiper slide */
+.dooz-hero-swiper {
+    border-radius: 22px;
+}
+
+.dooz-hero-slide {
+    position: relative;
+    display: block;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 3px solid #f39c12;
+    text-decoration: none;
+    background: #000;
+}
+
+.dooz-hero-slide__img {
+    width: 100%;
+    height: calc(130px * 3 + 16px);
+    object-fit: cover;
+    display: block;
+    border-radius: 22px;
+}
+
+.dooz-hero-slide__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 18px 22px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0));
+}
+
+/* =========================
+   SWIPER NAV BUTTONS STYLE
+========================= */
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 44px;
+    height: 44px;
+    font-size: 20px !important;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .55);
+    /* خلفية داكنة شفافة */
+    color: #fff;
+    /* لون السهم */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+    transition:
+        background-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+    svg {
+        display: none;
+    }
+}
+
+/* Hover */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #ffffff;
+    /* أبيض */
+    color: #000;
+    /* سهم أسود */
+    transform: scale(1.08);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .35);
+}
+
+/* Active (عند الضغط) */
+.swiper-button-prev:active,
+.swiper-button-next:active {
+    background: #0d6efd;
+    /* أزرق */
+    color: #fff;
+    transform: scale(0.96);
+}
+
+
+/* pagination */
+/* =========================
+   HERO SWIPER BULLETS STYLE
+========================= */
+
+/* الشكل الأساسي لكل الدوائر */
+.dooz-hero-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    /* مفرغة */
+    border: 2px solid #ffffff;
+    /* إطار أبيض */
+    opacity: 1;
+    /* واضحة */
+    margin: 0 6px !important;
+    transition:
+        background-color .2s ease,
+        border-color .2s ease,
+        transform .15s ease;
+}
+
+/* النقطة النشطة (المختارة حاليًا) */
+.dooz-hero-swiper .swiper-pagination-bullet-active {
+    background: #ffffff;
+    /* مملوءة أبيض */
+    border-color: #ffffff;
+    transform: scale(1.1);
+    /* تكبير بسيط */
+}
+
+/* عند الضغط (mouse / touch) */
+.dooz-hero-swiper .swiper-pagination-bullet:active {
+    background: #1e90ff;
+    /* أزرق */
+    border-color: #1e90ff;
+}
+
+/* Hover (اختياري – لطيف على الديسكتوب) */
+.dooz-hero-swiper .swiper-pagination-bullet:hover {
+    transform: scale(1.15);
+}
+
+
+/* ✅ على lg وما دون: نخفي الـ side ونخلي السلايدر لحاله */
+@media (width < 992px) {
+    .dooz-hero__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dooz-hero-slide__img {
+        height: 420px;
+    }
+}
+
+/* =========================
+   DOOZ HERO ADV */
+
+.adv {
+    .big-adv {
+        .swiper-wrapper {
+            height: 100px;
+
+            img {
+                height: 100px;
+            }
+        }
+    }
+}
+
+/* ===== DOOZ VIDEO RAIL ===== */
+.dooz-video-rail {
+    border: 1px solid #e7e7e7;
+    border-bottom: 7px solid #f39c12;
+}
+
+
+
+.dooz-video-rail__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.dooz-video-rail__title {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.dooz-video-rail__swiper {
+    position: relative;
+    /* direction: ltr !important; */
+}
+
+.dooz-video-rail__swiper.js-video-rail {
+    cursor: grab;
+}
+
+.js-video-rail:active {
+    cursor: grabbing;
+}
+
+.dooz-video-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dooz-video-card__thumb {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16 / 9;
+}
+
+.dooz-video-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* play badge */
+.dooz-video-card__yt {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(255, 0, 0, .9);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
+}
+
+.dooz-video-card__yt::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid #fff;
+}
+
+.dooz-video-card__caption {
+    margin: 10px 2px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 38px;
+    color: white;
+}
+
+/* nav buttons */
+.dooz-video-rail__nav {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.dooz-video-rail__btn {
+    pointer-events: auto;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 0;
+    background: rgba(0, 0, 0, .55);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition:
+        background-color .4s ease,
+        color .4s ease,
+        box-shadow .4s ease;
+}
+
+
+
+.dooz-video-rail__btn:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+.dooz-video-rail__btn:active {
+    background: #0d6efd;
+}
+
+/* dots */
+.dooz-video-rail__dots {
+    text-align: center;
+}
+
+.dooz-video-rail__dots .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid #eee;
+    opacity: 1;
+}
+
+.dooz-video-rail__dots .swiper-pagination-bullet-active {
+    background: #eee;
+}
+
+/* spacing in swiper */
+.dooz-video-rail__swiper .swiper-wrapper {
+    padding: 2px;
+}
+
+/* =========================
+   DOOZ NEWS GRID========================= */
+.dooz-news-grid {
+    background: #fff;
+    width: 100%;
+}
+
+/* Header شبيه بالصورة */
+.dooz-news-grid__header {
+    background: #95b41a;
+    border-bottom: 6px solid #f39c12;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+}
+
+.dooz-news-grid__title {
+    margin: 0;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1;
+    text-align: right;
+}
+
+.dooz-news-grid__titleLink {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dooz-news-grid__titleLink:hover {
+    text-decoration: underline;
+}
+
+/* Grid */
+.dooz-news-grid__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Responsive */
+@media (width < 992px) {
+    .dooz-news-grid__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* @media (max-width: 575.98px) {
+    .dooz-news-grid__list {
+        grid-template-columns: 1fr;
+    }
+} */
+
+.down-news-all-screen-down {
+
+    .arts-and-culture,
+    .community,
+    .official-speaks,
+    .miscellaneous,
+    .economy {
+        .dooz-news-grid__list {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        @media (width < 1200px) {
+            .dooz-news-grid__list {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media (width < 992px) {
+            .dooz-news-grid__list {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (width < 768px) {
+            .dooz-news-grid__list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+    }
+}
+
+
+/* Card */
+.dooz-news-card {
+    text-align: center;
+}
+
+.dooz-news-card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dooz-news-card__media {
+    border: 3px solid #f39c12;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #000;
+}
+
+.dooz-news-card__img {
+    width: 100%;
+    height: 130px;
+    /* قريب من اللي بالصورة */
+    object-fit: cover;
+    display: block;
+}
+
+.dooz-news-card__headline {
+    margin: 10px 6px 0;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.35;
+    color: #111;
+
+    /* سطرين مثل الصورة */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 44px;
+}
+
+/* Hover لطيف */
+.dooz-news-card__link:hover .dooz-news-card__media {
+    transform: translateY(-1px);
+}
+
+/* =========================
+   DOOZ MINI CALENDAR ===== */
+.dooz-mini-cal {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e9e9e9;
+    max-width: 380px;
+
+    /* احجام حسب عدد الأسابيع */
+    --cal-dot: 40px;
+}
+
+.dooz-mini-cal__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 12px;
+}
+
+.dooz-mini-cal__label {
+    text-align: center;
+    line-height: 1.1;
+}
+
+.dooz-mini-cal__month {
+    display: block;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.dooz-mini-cal__year {
+    display: block;
+    font-weight: 700;
+    opacity: .75;
+}
+
+.dooz-mini-cal__nav {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.dooz-mini-cal__nav::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #f39c12;
+    border-right: 3px solid #f39c12;
+}
+
+.dooz-mini-cal__nav--prev::after {
+    transform: rotate(225deg);
+}
+
+.dooz-mini-cal__nav--next::after {
+    transform: rotate(45deg);
+}
+
+.dooz-mini-cal__dow {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    padding: 0 12px 10px;
+    color: #f39c12;
+    font-weight: 800;
+    font-size: 13px;
+    text-align: center;
+}
+
+.dooz-mini-cal__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0px;
+    padding: 0 12px 14px;
+
+    /* ✅ ثبات الارتفاع (6 صفوف) */
+    height: 250px;
+    /* 40px دائرة * 6 + 10px فراغ * 5 */
+}
+
+.dooz-mini-cal__day {
+    width: var(--cal-dot);
+    height: var(--cal-dot);
+    margin-inline: auto;
+    border-radius: 999px;
+    border: 1px solid #95b41a;
+    display: grid;
+    place-items: center;
+    font-weight: 400;
+    color: #333;
+    background: #fff;
+    user-select: none;
+    position: relative;
+}
+
+.dooz-mini-cal__day.has-event::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    /* RTL: بتطلع يسار */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e63946;
+    box-shadow: 0 0 0 3px #fff;
+}
+
+/* الفاضي: يضل دائرة بس بدون رقم */
+.dooz-mini-cal__day.is-empty {
+    color: transparent;
+}
+
+.dooz-mini-cal__day.is-today {
+    background: #f4c57c;
+    border-color: #f4c57c;
+}
+
+/* ✅ تكبير حسب عدد الأسابيع (4/5/6) */
+.dooz-mini-cal[data-weeks="6"] {
+    --cal-dot: 40px
+}
+
+.dooz-mini-cal[data-weeks="5"] {
+    --cal-dot: 46px
+}
+
+.dooz-mini-cal[data-weeks="4"] {
+    --cal-dot: 46px
+}
+
+
+@media (max-width: 420px) {
+    .dooz-mini-cal__grid {
+        min-height: calc((36px * 6) + (10px * 5));
+    }
+
+    .dooz-mini-cal[data-weeks="6"] {
+        --cal-dot: 36px;
+    }
+
+    .dooz-mini-cal[data-weeks="5"] {
+        --cal-dot: 42px;
+    }
+
+    .dooz-mini-cal[data-weeks="4"] {
+        --cal-dot: 42px;
+    }
+}
+
+.dooz-mini-cal__day.is-clickable {
+    cursor: pointer;
+    transition: transform .15s ease;
+}
+
+.dooz-mini-cal__day.is-clickable:hover {
+    transform: translateY(-1px);
+}
+
+/* modal */
+.dooz-cal-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 9999;
+}
+
+.dooz-cal-modal.is-open {
+    display: block;
+}
+
+.dooz-cal-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+}
+
+.dooz-cal-modal__dialog {
+    position: relative;
+    width: min(640px, calc(100% - 32px));
+    margin: 12vh auto 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 26px 22px 18px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .35);
+    direction: rtl;
+    text-align: center;
+}
+
+.dooz-cal-modal__title {
+    margin: 0 0 14px;
+    font-size: 34px;
+    font-weight: 900;
+    color: #4b4b4b;
+}
+
+.dooz-cal-modal__body {
+    padding: 8px 6px 16px;
+}
+
+.dooz-cal-modal__item {
+    display: block;
+    margin: 10px auto;
+    font-weight: 800;
+    color: #1b66c9;
+    /* أزرق مثل الصورة */
+    text-decoration: none;
+}
+
+.dooz-cal-modal__item:hover {
+    text-decoration: underline;
+}
+
+.dooz-cal-modal__ok {
+    display: inline-block;
+    min-width: 120px;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: #8fd3ff;
+    font-weight: 900;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dooz-cal-modal__ok:hover {
+    filter: brightness(.95);
+}
+
+/* weather */
+.weather {
+    width: 100%;
+    background: #ffaa00;
+    border-top: #95b522 4px solid;
+
+    aside {
+        margin-top: -10px;
+    }
+
+    .temperatures {
+        span {
+            font-size: 30px;
+            color: #293656;
+            font-weight: 700;
+        }
+    }
+
+    .description-of-weather {
+        p {
+            font-size: 17px;
+        }
+    }
+}
+
+/* currencies */
+.currencies {
+    .currencies-header {
+        .currencies-logo {
+            width: 60px;
+            aspect-ratio: 1 / 1;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        span {
+            font-size: 45px;
+
+        }
+    }
+
+    .currencies-content {
+        width: 100%;
+
+        .currencies-text:first-child {
+            border-bottom: 2px solid #ddd;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .currencies-text:last-child {
+            color: #777;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
+
+/* pictures-slider */
+
+.dooz-pictures-slider {
+
+    .dooz-hero-swiper {
+        border-radius: 0;
+
+        a.dooz-hero-slide {
+            border: 0;
+            border-radius: 0;
+
+            img {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+/* dooz ask */
+.dooz-ask {
+    .questions {
+        .question {
+            background-color: #eee;
+            border: 1px solid #fff;
+
+            a {
+                display: flex;
+                transition: .5s;
+
+                img {
+                    width: 220px;
+                    height: 123px;
+                }
+
+
+
+                .question-text {
+                    h4 {
+                        color: #ff7b00;
+                        margin-top: 10px;
+                    }
+
+                    p {
+                        color: #546a12;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+}
+
+/* keytags */
+section.keytags {
+    .discover-more {
+        color: #5f6368;
+
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        .lightning-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid blue;
+            aspect-ratio: 1;
+            padding: 1.5px;
+            font-size: 8px;
+        }
+    }
+}
+
+/* The last advertisement before the footer*/
+.big-advertisement-before-footer {
+    .adv-ban {
+        display: block;
+        position: relative;
+        /* border-radius: 16px; */
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+        text-decoration: none;
+        height: 250px;
+    }
+
+    .adv-ban__tag {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background: #ffc107;
+        color: #111;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font: 600 13px/1 system-ui;
+        z-index: 1;
+    }
+
+    .adv-ban__img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        /* aspect-ratio: 1140/260; */
+        /* عدّل حسب إعلانك */
+        object-fit: cover;
+        object-position: center;
+    }
+
+    @media (width < 992px) {
+        .adv-ban {
+            height: 200px;
+        }
+    }
+
+    @media (width < 768px) {
+        .adv-ban {
+            height: 150px;
+        }
+    }
+
+    @media (width < 576px) {
+        .adv-ban {
+            height: 135px;
+        }
+    }
+}
+
+/* footer */
+
+footer {
+    background-color: #111;
+    color: #f39200;
+    text-align: center;
+
+    .icons-of-social-media {
+        direction: ltr;
+
+        a {
+            color: inherit;
+
+            i {
+                font-size: 32px;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 6px;
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    .container-md h6 {
+        font-size: 17px;
+    }
+
+    .copyright {
+        background-color: #222;
+        color: #95b522;
+    }
+}
+
+/* community swiper */
+
+/* Swiper buttons تكون فوق المحتوى */
+.doozsmallswiperleft {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.doozsmallswiperleft__link {
+    display: block;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.doozsmallswiperleft__img {
+    width: 100%;
+    height: 203px;
+    /* نفس ارتفاع bx-viewport عندك */
+    object-fit: cover;
+    display: block;
+}
+
+@media (768px < width < 992px) {
+    .doozsmallswiperleft__img {
+        height: 340px;
+    }
+}
+
+@media (576px < width < 768px) {
+    .doozsmallswiperleft__img {
+        height: 285px;
+    }
+}
+
+@media (width < 576px) {
+    .doozsmallswiperleft__img {
+        height: 245px;
+    }
+}
+
+.doozsmallswiperleft__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    padding-bottom: 18px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.3;
+    background-color: #505050bf;
+
+}
+
+.doozsmallswiperleft .swiper-pagination {
+    bottom: -2px;
+}
+
+.doozsmallswiperleft .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid #eee;
+    opacity: 1;
+}
+
+/* عند الضغط (mouse / touch) */
+.doozsmallswiperleft .swiper-pagination-bullet:active {
+    background: #1e90ff;
+    /* أزرق */
+    border-color: #1e90ff;
+}
+
+.doozsmallswiperleft .swiper-pagination-bullet-active {
+    background: #ffffff;
+    /* مملوءة أبيض */
+    border-color: #ffffff;
+    transform: scale(1.1);
+    /* تكبير بسيط */
+}
+
+/* Hover (اختياري – لطيف على الديسكتوب) */
+.doozsmallswiperleft .swiper-pagination-bullet:hover {
+    transform: scale(1.15);
+}
+
+
+/* keytagsleft */
+.keytagsleft {
+    .keytags-content {
+        direction: ltr;
+    }
+}
+
+/* gif-adv */
+.gif-adv {
+    max-width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+/* @media (768px < width < 992px) {
+    .gif-adv {
+        max-width: 75%;
+        margin-inline: auto;
+
+    }
+} */

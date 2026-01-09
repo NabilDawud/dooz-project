@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assests/img/logoes/favicon.png" type="image/x-icon">
+    <!-- bootstrap 5.2 -->
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <!-- font awesome 7.1 -->
+    <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"> -->
+     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <!-- swiper css -->
+    <!-- <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css"> -->
+     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="assests/css/style.css">
+
+    <title>الى الخبر.. المعلومة والحوار</title>
+</head>
+
+<body>
+    <!-- Facebook SDK (required for fb-like) -->
+    <div id="fb-root"></div>
+
+    <div class="dooz-social-bar">
+
+        <a href="https://www.facebook.com/Dooz.News" target="_blank" aria-label="Facebook">
+            <img src="assests/img/logoes/facebook.png" alt="facebook logo">
+        </a>
+
+        <a href="https://www.instagram.com/dooznablus/" target="_blank" aria-label="Instagram">
+            <img src="assests/img/logoes/instegram.png" alt="instagram logo">
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCGSUJEes_AwVnhDsqa-Mi_w" target="_blank" aria-label="YouTube">
+            <img src="assests/img/logoes/youtube.png" alt="youtube logo">
+        </a>
+
+        <a href="https://twitter.com/dooznablus" target="_blank" aria-label="Twitter">
+            <img src="assests/img/logoes/x.png" alt="X logo">
+        </a>
+
+        <a href="https://soundcloud.com/golocal" target="_blank" aria-label="SoundCloud">
+            <img src="https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14bdb.ico" alt="soundcloud logo">
+        </a>
+
+        <a href="https://t.me/Dooz_News" target="_blank" aria-label="Telegram">
+            <img src="assests/img/logoes/telegram.png" alt="telegram logo">
+        </a>
+
+    </div>
+
+
+    <nav class="navbar-up py-2">
+        <div class="container-fluid container-md px-md-0">
+            <div class="header-grid">
+
+                <!-- Right: Logo -->
+                <a class="brand d-flex align-items-center" href="https://www.dooz.ps/" aria-label="Dooz">
+                    <img class="brand__logo" src="https://www.dooz.ps/assets/site/img/logo.png" alt="Dooz Logo">
+                </a>
+
+                <!-- Center: Ads Slider -->
+                <div class="ads-wrap" aria-label="Ads Slider">
+                    <div class="swiper swiper-adv adsSwiper">
+                        <div class="swiper-wrapper">
+                            <a class="swiper-slide ads-slide"
+                                href="https://www.elections.ps/tabid/596/language/ar-PS/Default.aspx" target="_blank"
+                                rel="noopener" title="الانتخابات ٢">
+                                <img src="https://www.dooz.ps/wp-content/uploads/2025/12/elections2.jpg"
+                                    alt="الانتخابات ٢">
+                            </a>
+                            <a class="swiper-slide ads-slide" href="https://mada.ps/ar/45/" target="_blank"
+                                rel="noopener" title="mada-Feb.2025">
+                                <img src="https://www.dooz.ps/wp-content/uploads/2025/09/Artboard%203%20copy%204.png"
+                                    alt="mada-Feb.2025">
+                            </a>
+                            <a class="swiper-slide ads-slide" href="https://www.facebook.com/Dooz.News" target="_blank"
+                                rel="noopener" title="Dooz.ps">
+                                <img src="https://www.dooz.ps/wp-content/uploads/Ads/dooz-werbung-1.jpg" alt="Dooz.ps">
+                            </a>
+                            <a class="swiper-slide ads-slide" href="https://apps.elections.ps/ERegPublic/VotersReg.aspx"
+                                target="_blank" rel="noopener" title="الانتخابات ١">
+                                <img src="https://www.dooz.ps/wp-content/uploads/2025/12/1.jpg" alt="الانتخابات ١">
+                            </a>
+
+                        </div>
+
+                        <!-- Optional controls -->
+                        <!-- <div class="swiper-button-prev d-none d-lg-flex"></div>
+                        <div class="swiper-button-next d-none d-lg-flex"></div>
+                        <div class="swiper-pagination d-none d-md-block"></div> -->
+                    </div>
+                </div>
+
+                <!-- Left: Like/Share (hide on small like your code) -->
+                <div class="social d-none d-lg-flex justify-content-start">
+                    <!-- Facebook Like/Share Plugin container-fluid container-md px-md-0 -->
+                    <div class="fb-like" data-href="https://www.facebook.com/Dooz.News" data-width="350"
+                        data-layout="standard" data-action="like" data-size="small" data-share="true">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <nav class="navbar navbar-expand-lg dooz-main-navbar" id="doozHeader">
+        <div class="container-fluid container-md px-md-0  dooz-main-navbar__inner ">
+
+            <!-- 🔍 Mobile Search -->
+            <form class="dooz-main-navbar__search dooz-main-navbar__search--mobile d-lg-none"
+                action="https://www.dooz.ps/search" method="post">
+                <div class="dooz-main-navbar__search-group">
+                    <button type="submit" class="dooz-main-navbar__search-btn" aria-label="بحث">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text" name="s" placeholder="بحث عن.." class="dooz-main-navbar__search-input">
+                </div>
+            </form>
+
+            <!-- ☰ Toggler -->
+            <button class="navbar-toggler dooz-main-navbar__toggler d-lg-none ms-auto" type="button"
+                data-bs-toggle="collapse" data-bs-target="#doozMainNavbarMenu" aria-controls="doozMainNavbarMenu"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- ✅ Menu (Bootstrap Collapse) -->
+            <div class="collapse navbar-collapse row-gap-3 column-gap-xl-2" id="doozMainNavbarMenu">
+                <nav class="dooz-main-navbar__menu" aria-label="Main menu">
+                    <a href="https://www.dooz.ps/" class="dooz-main-navbar__link is-active">الرئيسية</a>
+                    <a href="https://www.dooz.ps/cat/3" class="dooz-main-navbar__link">الأخبار</a>
+                    <a href="https://www.dooz.ps/cat/3947" class="dooz-main-navbar__link">حكم محلي</a>
+                    <a href="https://www.dooz.ps/cat/5" class="dooz-main-navbar__link">شباب وجامعة</a>
+                    <a href="https://www.dooz.ps/cat/6" class="dooz-main-navbar__link">مجتمع</a>
+                    <a href="https://www.dooz.ps/cat/19" class="dooz-main-navbar__link">خدمات</a>
+                    <a href="https://www.dooz.ps/cat/7" class="dooz-main-navbar__link">فن وثقافة</a>
+                    <a href="https://www.dooz.ps/cat/8" class="dooz-main-navbar__link">منوعات</a>
+                    <a href="https://www.dooz.ps/cat/9" class="dooz-main-navbar__link">مسؤول بحكي</a>
+                    <a href="https://www.dooz.ps/cat/10" class="dooz-main-navbar__link">اقتصاد</a>
+                    <a href="https://www.dooz.ps/cat/12" class="dooz-main-navbar__link">دوز يسأل</a>
+                    <a href="https://www.dooz.ps/cat/4" class="dooz-main-navbar__link">رياضة</a>
+                    <a href="https://www.dooz.ps/cat/13" class="dooz-main-navbar__link">صور</a>
+                    <a href="https://www.dooz.ps/page/4" class="dooz-main-navbar__link">من نحن</a>
+                    <a href="https://www.dooz.ps/page/6" class="dooz-main-navbar__link">اتصل بنا</a>
+                </nav>
+
+                <!-- 🔍 Desktop Search (يسار على الديسكتوب) -->
+                <form
+                    class="dooz-main-navbar__search dooz-main-navbar__search--desktop d-none d-lg-block  me-lg-0 me-xxl-auto"
+                    action="https://www.dooz.ps/search" method="post">
+                    <div class="dooz-main-navbar__search-group">
+                        <button type="submit" class="dooz-main-navbar__search-btn" aria-label="بحث">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input type="text" name="s" placeholder="بحث عن.." class="dooz-main-navbar__search-input">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="scrolling-strip">
+        <div class="container-fluid container-md px-md-0">
+            <section class="dooz-breaking-ticker" aria-label="شريط الأخبار">
+                <div class="dooz-breaking-ticker__inner">
+
+                    <!-- الزر الأسود على اليمين -->
+                    <a class="dooz-breaking-ticker__tag" href="/cat/3" title="اذهب إلى الأخبار">
+                        شريط الأخبار
+                    </a>
+
+                    <!-- مسار الحركة -->
+                    <div class="dooz-breaking-ticker__track" role="marquee" aria-live="off">
+                        <div class="dooz-breaking-ticker__marquee">
+
+                            <!-- المجموعة الأولى -->
+                            <div class="dooz-breaking-ticker__group">
+                                <a class="dooz-breaking-ticker__item" href="#">🇵🇸 إطلاق حملة "المأوى حق غزة"</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png"
+                                        alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">🇵🇸 اعتقال 3 شبان من طولكرم</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png"
+                                        alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">🇮🇷 ترامب يهدد إيران بـ"ضربة قاسية" إذا
+                                    قتل متظاهرون</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png"
+                                        alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">🇮🇷 ترامب يهدد إيران بـ"ضربة قاسية" إذا
+                                    قتل متظاهرون</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png"
+                                        alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">🇮🇷 ترامب يهدد إيران بـ"ضربة قاسية" إذا
+                                    قتل متظاهرون</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png"
+                                        alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">الانتخابات القادمة: الإسراع بإنهاء
+                                    ...</a><span class="dooz-breaking-ticker__sep"><img
+                                        src="assests/img/logoes/logowithword.png" alt=""></span>
+                            </div>
+
+                            <!-- المجموعة الثانية (نفس الأولى لعمل loop سلس) -->
+                            <!-- <div class="dooz-breaking-ticker__group" aria-hidden="true">
+                                <a class="dooz-breaking-ticker__item" href="#">🇵🇸 إطلاق حملة "المأوى حق غزة"</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png" alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">🇵🇸 اعتقال 3 شبان من طولكرم</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png" alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">
+                                    قتل متظاهرون</a>
+                                <span class="dooz-breaking-ticker__sep"><img src="assests/img/logoes/logowithword.png" alt=""></span>
+                                <a class="dooz-breaking-ticker__item" href="#">الانتخابات القادمة: الإسراع بإنهاء
+                                    ...</a>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <section class="dooz-hero pb-0">
+        <div class="container-fluid container-md px-md-0">
+            <div class="dooz-hero__layout">
+
+                <!-- ✅ HERO SWIPER (السلايدر الكبير) -->
+                <div class="dooz-hero__main">
+                    <div class="swiper dooz-hero-swiper overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <!-- Slide -->
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2024/01/Tobacco1.png"
+                                    alt="ارتفاع أسعار السجائر في السوق الفلسطينية" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    ارتفاع أسعار السجائر في السوق الفلسطينية
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg"
+                                    alt="خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2024/01/Tobacco1.png"
+                                    alt="ارتفاع أسعار السجائر في السوق الفلسطينية" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    ارتفاع أسعار السجائر في السوق الفلسطينية
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg"
+                                    alt="خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2024/01/Tobacco1.png"
+                                    alt="ارتفاع أسعار السجائر في السوق الفلسطينية" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    ارتفاع أسعار السجائر في السوق الفلسطينية
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg"
+                                    alt="خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2024/01/Tobacco1.png"
+                                    alt="ارتفاع أسعار السجائر في السوق الفلسطينية" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    ارتفاع أسعار السجائر في السوق الفلسطينية
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg"
+                                    alt="خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2024/01/Tobacco1.png"
+                                    alt="ارتفاع أسعار السجائر في السوق الفلسطينية" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    ارتفاع أسعار السجائر في السوق الفلسطينية
+                                </div>
+                            </a>
+                            <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/273965">
+                                <img class="dooz-hero-slide__img"
+                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg"
+                                    alt="خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني" loading="lazy">
+                                <div class="dooz-hero-slide__caption">
+                                    خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني
+                                </div>
+                            </a>
+
+
+                            <!-- كرر سلايداتك بنفس الشكل... -->
+
+                        </div>
+
+                        <!-- bullets -->
+                        <!-- <div class="dooz-hero-swiper-button-prev d-none d-lg-flex"></div>
+                        <div class="dooz-hero-swiper-button-next d-none d-lg-flex"></div> -->
+                        <div class="swiper-button-prev dooz-hero-swiper-button-prev d-none d-lg-flex"><i
+                                class="fa-solid fa-angle-right"></i></div>
+                        <div class="swiper-button-next dooz-hero-swiper-button-next d-none d-lg-flex"><i
+                                class="fa-solid fa-angle-left"></i></div>
+                        <div class="swiper-pagination dooz-hero-swiper__pagination"></div>
+                    </div>
+                </div>
+
+                <!-- ✅ SIDE GRID (الـ 6 عناصر) -->
+                <!-- اختفاء على md وما دون: d-none d-lg-block -->
+                <aside class="dooz-hero__side d-none d-lg-block">
+                    <div class="dooz-hero-sidegrid">
+                        <a class="dooz-hero-card" href="https://www.dooz.ps/p/273977">
+                            <img class="dooz-hero-card__img"
+                                src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg" alt=""
+                                loading="lazy">
+                            <div class="dooz-hero-card__title">خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني</div>
+                        </a>
+                        <a class="dooz-hero-card" href="https://www.dooz.ps/p/273975">
+                            <img class="dooz-hero-card__img"
+                                src="https://www.dooz.ps/wp-content/uploads/Faces-Persons/Mansour-Abbas-7.jpg" alt=""
+                                loading="lazy">
+                            <div class="dooz-hero-card__title">منصور عباس: الموحدة تفتح أبوابها لليهود...</div>
+                        </a>
+                        <a class="dooz-hero-card" href="https://www.dooz.ps/p/273977">
+                            <img class="dooz-hero-card__img"
+                                src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg" alt=""
+                                loading="lazy">
+                            <div class="dooz-hero-card__title">خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني</div>
+                        </a>
+                        <a class="dooz-hero-card" href="https://www.dooz.ps/p/273975">
+                            <img class="dooz-hero-card__img"
+                                src="https://www.dooz.ps/wp-content/uploads/Faces-Persons/Mansour-Abbas-7.jpg" alt=""
+                                loading="lazy">
+                            <div class="dooz-hero-card__title">منصور عباس: الموحدة تفتح أبوابها لليهود...</div>
+                        </a>
+                        <a class="dooz-hero-card" href="https://www.dooz.ps/p/273977">
+                            <img class="dooz-hero-card__img"
+                                src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg" alt=""
+                                loading="lazy">
+                            <div class="dooz-hero-card__title">خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني</div>
+                        </a>
+                        <a class="dooz-hero-card" href="https://www.dooz.ps/p/273975">
+                            <img class="dooz-hero-card__img"
+                                src="https://www.dooz.ps/wp-content/uploads/Faces-Persons/Mansour-Abbas-7.jpg" alt=""
+                                loading="lazy">
+                            <div class="dooz-hero-card__title">منصور عباس: الموحدة تفتح أبوابها لليهود...</div>
+                        </a>
+
+                        <!-- كرر لحد ما يصيروا 6 -->
+
+                    </div>
+                </aside>
+
+            </div>
+            <div class="row adv d-flex gx-3 gy-1 py-3">
+                <div class="big-adv col-12 col-md-7">
+                    <div class="ads-wrap" aria-label="Ads Slider">
+                        <div class="swiper swiper-adv adsSwiper1">
+                            <div class="swiper-wrapper">
+                                <a class="swiper-slide ads-slide" href="https://mada.ps/ar/45/" target="_blank"
+                                    rel="noopener" title="mada-Feb.2025">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/2025/09/Artboard%203%20copy%204.png"
+                                        alt="mada-Feb.2025">
+                                </a>
+                                <a class="swiper-slide ads-slide"
+                                    href="https://www.elections.ps/tabid/596/language/ar-PS/Default.aspx"
+                                    target="_blank" rel="noopener" title="الانتخابات ٢">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/2025/12/elections2.jpg"
+                                        alt="الانتخابات ٢">
+                                </a>
+
+                                <a class="swiper-slide ads-slide" href="https://www.facebook.com/Dooz.News"
+                                    target="_blank" rel="noopener" title="Dooz.ps">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/Ads/dooz-werbung-1.jpg"
+                                        alt="Dooz.ps">
+                                </a>
+                                <a class="swiper-slide ads-slide"
+                                    href="https://apps.elections.ps/ERegPublic/VotersReg.aspx" target="_blank"
+                                    rel="noopener" title="الانتخابات ١">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/2025/12/1.jpg" alt="الانتخابات ١">
+                                </a>
+
+                            </div>
+
+                            <!-- Optional controls -->
+                            <!-- <div class="swiper-button-prev1 d-none d-lg-flex"></div>
+                        <div class="swiper-button-next1 d-none d-lg-flex"></div>
+                        <div class="swiper-pagination1 d-none d-md-block"></div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="small-adv col-12 col-md-5">
+                    <div class="ads-wrap" aria-label="Ads Slider">
+                        <div class="swiper swiper-adv adsSwiper2">
+                            <div class="swiper-wrapper">
+                                <a class="swiper-slide ads-slide"
+                                    href="https://apps.elections.ps/ERegPublic/VotersReg.aspx" target="_blank"
+                                    rel="noopener" title="الانتخابات ١">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/2025/12/1.jpg" alt="الانتخابات ١">
+                                </a>
+                                <a class="swiper-slide ads-slide"
+                                    href="https://www.elections.ps/tabid/596/language/ar-PS/Default.aspx"
+                                    target="_blank" rel="noopener" title="الانتخابات ٢">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/2025/12/elections2.jpg"
+                                        alt="الانتخابات ٢">
+                                </a>
+                                <a class="swiper-slide ads-slide" href="https://mada.ps/ar/45/" target="_blank"
+                                    rel="noopener" title="mada-Feb.2025">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/2025/09/Artboard%203%20copy%204.png"
+                                        alt="mada-Feb.2025">
+                                </a>
+                                <a class="swiper-slide ads-slide" href="https://www.facebook.com/Dooz.News"
+                                    target="_blank" rel="noopener" title="Dooz.ps">
+                                    <img src="https://www.dooz.ps/wp-content/uploads/Ads/dooz-werbung-1.jpg"
+                                        alt="Dooz.ps">
+                                </a>
+
+
+                            </div>
+
+                            <!-- Optional controls -->
+                            <!-- <div class="swiper-button-prev2 d-none d-lg-flex"></div>
+                        <div class="swiper-button-next2 d-none d-lg-flex"></div>
+                        <div class="swiper-pagination2 d-none d-md-block"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="dooz-video-rail bg-black px-3" aria-label="فيديوهات دوز">
+
+                <!-- Swiper -->
+                <div class="swiper dooz-video-rail__swiper js-video-rail ">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide -->
+                        <a class="swiper-slide dooz-video-card" href="https://youtu.be/aI05kivIF48" target="_blank"
+                            rel="noopener" aria-label="مشاهدة الفيديو على يوتيوب">
+                            <div class="dooz-video-card__thumb">
+                                <img src="https://img.youtube.com/vi/aI05kivIF48/mqdefault.jpg"
+                                    alt="مهندس بلدية نابلس يوضح المشاريع..." loading="lazy">
+                                <span class="dooz-video-card__yt" aria-hidden="true"></span>
+                            </div>
+                            <p class="dooz-video-card__caption">مهندس بلدية نابلس يوضح المشاريع التي يتم العمل عليها
+                                حالياً</p>
+                        </a>
+
+                        <!-- كرر سلايداتك (غير الـ id) -->
+                        <a class="swiper-slide dooz-video-card" href="https://youtu.be/k1NQQ1RwWG8" target="_blank"
+                            rel="noopener">
+                            <div class="dooz-video-card__thumb">
+                                <img src="https://img.youtube.com/vi/k1NQQ1RwWG8/mqdefault.jpg"
+                                    alt="مشروع التوعية الانتخابية..." loading="lazy">
+                                <span class="dooz-video-card__yt" aria-hidden="true"></span>
+                            </div>
+                            <p class="dooz-video-card__caption">مشروع التوعية الانتخابية في مدرسة عصيرة الشمالية -
+                                نابلس</p>
+                        </a>
+
+                        <a class="swiper-slide dooz-video-card" href="https://youtu.be/GBNkcsspulI" target="_blank"
+                            rel="noopener">
+                            <div class="dooz-video-card__thumb">
+                                <img src="https://img.youtube.com/vi/GBNkcsspulI/mqdefault.jpg"
+                                    alt="مخاوف أهالي نابلس..." loading="lazy">
+                                <span class="dooz-video-card__yt" aria-hidden="true"></span>
+                            </div>
+                            <p class="dooz-video-card__caption">مخاوف أهالي نابلس بعد إخطار 20 منزلاً بالهدم</p>
+                        </a>
+
+                        <a class="swiper-slide dooz-video-card" href="https://youtu.be/5GGVB9SaIsk" target="_blank"
+                            rel="noopener">
+                            <div class="dooz-video-card__thumb">
+                                <img src="https://img.youtube.com/vi/5GGVB9SaIsk/mqdefault.jpg"
+                                    alt="ما رأي أهالي نابلس..." loading="lazy">
+                                <span class="dooz-video-card__yt" aria-hidden="true"></span>
+                            </div>
+                            <p class="dooz-video-card__caption">ما رأي أهالي نابلس بجهود الشرطة بضبط السيارات
+                                المزعجة؟</p>
+                        </a>
+                        <a class="swiper-slide dooz-video-card" href="https://youtu.be/k1NQQ1RwWG8" target="_blank"
+                            rel="noopener">
+                            <div class="dooz-video-card__thumb">
+                                <img src="https://img.youtube.com/vi/k1NQQ1RwWG8/mqdefault.jpg"
+                                    alt="مشروع التوعية الانتخابية..." loading="lazy">
+                                <span class="dooz-video-card__yt" aria-hidden="true"></span>
+                            </div>
+                            <p class="dooz-video-card__caption">مشروع التوعية الانتخابية في مدرسة عصيرة الشمالية -
+                                نابلس</p>
+                        </a>
+
+                        <a class="swiper-slide dooz-video-card" href="https://youtu.be/GBNkcsspulI" target="_blank"
+                            rel="noopener">
+                            <div class="dooz-video-card__thumb">
+                                <img src="https://img.youtube.com/vi/GBNkcsspulI/mqdefault.jpg"
+                                    alt="مخاوف أهالي نابلس..." loading="lazy">
+                                <span class="dooz-video-card__yt" aria-hidden="true"></span>
+                            </div>
+                            <p class="dooz-video-card__caption">مخاوف أهالي نابلس بعد إخطار 20 منزلاً بالهدم</p>
+                        </a>
+
+                        <a class="swiper-slide dooz-video-card" href="https://youtu.be/5GGVB9SaIsk" target="_blank"
+                            rel="noopener">
+                            <div class="dooz-video-card__thumb">
+                                <img src="https://img.youtube.com/vi/5GGVB9SaIsk/mqdefault.jpg"
+                                    alt="ما رأي أهالي نابلس..." loading="lazy">
+                                <span class="dooz-video-card__yt" aria-hidden="true"></span>
+                            </div>
+                            <p class="dooz-video-card__caption">ما رأي أهالي نابلس بجهود الشرطة بضبط السيارات
+                                المزعجة؟</p>
+                        </a>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="dooz-video-rail__nav">
+                        <button class="dooz-video-rail__btn dooz-video-rail__btn--prev" type="button"
+                            aria-label="السابق"><i class="fa-solid fa-angle-right"></i></button>
+                        <button class="dooz-video-rail__btn dooz-video-rail__btn--next" type="button"
+                            aria-label="التالي"><i class="fa-solid fa-angle-left"></i></button>
+                    </div>
+
+                    <div class="dooz-video-rail__dots py-1 py-sm-2   py-md-3"></div>
+                </div>
+
+
+            </section>
+
+            <section class="all-of-news-up-and-down bg-white px-3 mx-0">
+                <section class="row all-of-news pt-4 mx-0">
+                    <div class="col-12 col-lg-7 col-xl-8 pe-0 ps-0 ps-lg-3">
+                        <div class="all-of-news-right-content ">
+                            <section class="dooz-news-grid" aria-label="الأخبار">
+                                <header class="dooz-news-grid__header">
+                                    <h2 class="dooz-news-grid__title">
+                                        <a class="dooz-news-grid__titleLink"
+                                            href="https://www.dooz.ps/cat/3">الأخبار</a>
+                                    </h2>
+                                </header>
+                                <div class="dooz-news-grid__list">
+                                    <!-- Card -->
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273974">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2019/06/Sinking.jpg"
+                                                    alt="وفاة طفل غرقاً في أريحا" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">وفاة طفل غرقاً في أريحا</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273975">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Faces-Persons/Mansour-Abbas-7.jpg"
+                                                    alt="منصور عباس: الموحدة تفتح أبوابها لليهود..." loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">منصور عباس: الموحدة تفتح أبوابها لليهود
+                                                وتطرح نفسها حزباً مدنياً</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273977">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/al-Marajim-1.jpg"
+                                                    alt="خربة المراجم… وحيدة في مواجهة الزحف الاستيطاني" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">خربة المراجم… وحيدة في مواجهة الزحف
+                                                الاستيطاني</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273973">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Bethlehem-1.jpg"
+                                                    alt="وصول حارس الأراضي المقدسة إلى بيت لحم..." loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">وصول حارس الأراضي المقدسة إلى بيت لحم
+                                                للاحتفال بعيد الغطاس</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273972">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/10/gaza-2.jpg"
+                                                    alt="ارتقاء مواطن في القطاع" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">ارتقاء مواطن في القطاع</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273971">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Beit-Furik-2.jpg"
+                                                    alt="فيديو.. مستوطنون يغلقون طريقاً في سهل بيت فوريك"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">فيديو.. مستوطنون يغلقون طريقاً في سهل
+                                                بيت
+                                                فوريك</h3>
+                                        </a>
+                                    </article>
+                                </div>
+                            </section>
+                            <section class="dooz-pictures-slider">
+                                <header class="dooz-news-grid__header mt-4">
+                                    <h2 class="dooz-news-grid__title">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/13">معرض
+                                            الصور</a>
+                                    </h2>
+                                </header>
+                                <div class="swiper dooz-hero-swiper rounded-0">
+                                    <div class="swiper-wrapper">
+                                        <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/203446">
+                                            <img class="dooz-hero-slide__img"
+                                                src="https://www.dooz.ps/wp-content/uploads/University/Kadoorie-University-6.jpg"
+                                                alt="كليات جامعة خضوري - طولكرم" loading="lazy">
+                                            <div class="dooz-hero-slide__caption">
+                                                كليات جامعة خضوري - طولكرم
+                                                <span class="dooz-hero-slide__credit">تصوير: لانا عثمان</span>
+                                            </div>
+                                        </a>
+                                        <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/199248">
+                                            <img class="dooz-hero-slide__img"
+                                                src="https://www.dooz.ps/wp-content/uploads/2022/08/Grape-na-6.jpg"
+                                                alt="رغم شح المياه.. زراعة العنب في سهل بيت فوريك" loading="lazy">
+                                            <div class="dooz-hero-slide__caption">
+                                                رغم شح المياه.. زراعة العنب في سهل بيت فوريك
+                                                <span class="dooz-hero-slide__credit">تصوير: علي حنني</span>
+                                            </div>
+                                        </a>
+                                        <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/195812">
+                                            <img class="dooz-hero-slide__img"
+                                                src="https://www.dooz.ps/wp-content/uploads/2022/06/alsaraya-aleuthmania-4.jpg"
+                                                alt="السرايا العثمانية في طولكرم" loading="lazy">
+                                            <div class="dooz-hero-slide__caption">
+                                                السرايا العثمانية في طولكرم
+                                                <span class="dooz-hero-slide__credit">تصوير: لانا عثمان</span>
+                                            </div>
+                                        </a>
+                                        <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/191248">
+                                            <img class="dooz-hero-slide__img"
+                                                src="https://www.dooz.ps/wp-content/uploads/2022/04/wad-alqalt-9.jpg"
+                                                alt="مسار وادي القلط في أريحا" loading="lazy">
+                                            <div class="dooz-hero-slide__caption">
+                                                مسار وادي القلط في أريحا
+                                                <span class="dooz-hero-slide__credit">تصوير: علي حنني</span>
+                                            </div>
+                                        </a>
+                                        <a class="swiper-slide dooz-hero-slide" href="https://www.dooz.ps/p/191092">
+                                            <img class="dooz-hero-slide__img"
+                                                src="https://www.dooz.ps/wp-content/uploads/2022/04/ramadan-7.jpg"
+                                                alt="أسواق نابلس في رمضان 2022" loading="lazy">
+                                            <div class="dooz-hero-slide__caption">
+                                                أسواق نابلس في رمضان 2022
+                                                <span class="dooz-hero-slide__credit">تصوير: دانة عبده</span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <!-- bullets -->
+                                    <!-- <div class="dooz-hero-swiper-button-prev d-none d-lg-flex"></div>
+                        <div class="dooz-hero-swiper-button-next d-none d-lg-flex"></div> -->
+                                    <div class="swiper-button-prev dooz-hero-swiper-button-prev d-none d-lg-flex"><i
+                                            class="fa-solid fa-angle-right"></i></div>
+                                    <div class="swiper-button-next dooz-hero-swiper-button-next d-none d-lg-flex"><i
+                                            class="fa-solid fa-angle-left"></i></div>
+                                    <div class="swiper-pagination dooz-hero-swiper__pagination"></div>
+                                </div>
+                            </section>
+                            <section class="dooz-services-grid mt-4" aria-label="الخدمات">
+                                <header class="dooz-news-grid__header">
+                                    <h2 class="dooz-news-grid__title">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/19">خدمات</a>
+                                    </h2>
+                                </header>
+                                <div class="dooz-news-grid__list">
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274003">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Daily_USE/water.jpg"
+                                                    alt="بلدية نابلس: جدول توزيع المياه" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">بلدية نابلس: جدول توزيع المياه</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273999">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Daily_USE/Slightly-high.jpg"
+                                                    alt="الطقس: ارتفاع على درجات الحرارة" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">الطقس: ارتفاع على درجات الحرارة</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273991">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2018/12/sales-person.jpg"
+                                                    alt="مطلوب مستشار تنمية القدرات- الحماية المدنية" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">مطلوب مستشار تنمية القدرات- الحماية
+                                                المدنية
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273990">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2020/01/Translator11.jpg"
+                                                    alt="مطلوب مدير الموارد البشرية والتدقيق الداخلي" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">مطلوب مدير الموارد البشرية والتدقيق
+                                                الداخلي
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273989">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2021/02/pexels-lisa-fotios-109267100.jpg"
+                                                    alt="مطلوب منشئ محتوى وسائل التواصل الاجتماعي" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">مطلوب منشئ محتوى وسائل التواصل
+                                                الاجتماعي
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273988">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Nice-administrative-employee-09.jpg"
+                                                    alt="مطلوب محاسب إيرادات المبيعات" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">مطلوب محاسب إيرادات المبيعات</h3>
+                                        </a>
+                                    </article>
+
+                                </div>
+
+                            </section>
+                            <section class="dooz-ask mt-4" aria-label="دوز يسأل">
+                                <header class="dooz-news-grid__header">
+                                    <h2 class="dooz-news-grid__title">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/12">دوز
+                                            يسأل</a>
+                                    </h2>
+                                </header>
+                                <div class="questions">
+                                    <div class="question">
+                                        <a href="https://www.dooz.ps/p/234543"
+                                            class="d-flex column-gap-2 py-2 px-4 text-decoration-none flex-column flex-xl-row">
+                                            <img src="https://www.dooz.ps/wp-content/uploads/Places3/Nablus-old-city-2.jpg"
+                                                alt="فيديو: مشاريع بلدية نابلس في البلدة القديمة 2024" loading="lazy">
+                                            <div class="question-text">
+                                                <h4> فيديو: مشاريع بلدية نابلس في البلدة القديمة 2024 </h4>
+                                                <p> بلدية نابلس تجري عدة مشاريع في البلدة القديمة بنابلس عام 2024، منها
+                                                    إعادة
+                                                    تأهيل 3 ساحات في البلدة القديمة ومشاريع أخرى.. تعرف عليها من خلال
+                                                    التقرير
+                                                    التالي: </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="question">
+                                        <a href="https://www.dooz.ps/p/230034"
+                                            class="d-flex column-gap-2 py-2 px-4 text-decoration-none flex-column flex-xl-row">
+                                            <img src="https://www.dooz.ps/wp-content/uploads/Sabreen/Jerusalem_(29558196303).jpg"
+                                                alt="فيديو: مشاريع بلدية نابلس في البلدة القديمة 2024" loading="lazy">
+                                            <div class="question-text">
+                                                <h4> فيديو.. رمضان في القدس </h4>
+                                                <p> تستقبل مدينة القدس شهر رمضان الكريم هذا العام بظروف استثنائية بسبب
+                                                    الحرب،
+                                                    فالأسواق مشلولة والوضع التجاري سيء للغاية، وسط دعوات بتكثيف زيارات
+                                                    القدس
+                                                    والمسجد
+                                                    الأقصى. </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="dooz-youth-and-university mt-4" aria-label="شباب وجامعة">
+                                <header class="dooz-news-grid__header">
+                                    <h2 class="dooz-news-grid__title">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/5">شباب
+                                            وجامعة</a>
+                                    </h2>
+                                </header>
+                                <div class="dooz-news-grid__list">
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274056">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Birzeit-University.jpg"
+                                                    alt="جامعة بيرزيت تدين اقتحام الجيش حرمها الجامعي" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">جامعة بيرزيت تدين اقتحام الجيش حرمها
+                                                الجامعي
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273876">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Kadoorie.jpg"
+                                                    alt="إطلاق المرحلة الثالثة من أولمبياد الرياضيات الفلسطيني للعام 2026"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">إطلاق المرحلة الثالثة من أولمبياد
+                                                الرياضيات
+                                                الفلسطيني للعام 2026</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273701">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/Awartani-Al-Dweik-Barham-Al-Sharbaty.jpg"
+                                                    alt="ثلاث اتفاقيات تعاون لتعزيز حفظ الذاكرة الوطنية في الخليل"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">ثلاث اتفاقيات تعاون لتعزيز حفظ الذاكرة
+                                                الوطنية
+                                                في الخليل</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273685">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/jojo/techno-girls-youth.jpg"
+                                                    alt="منح دراسية من البنك الإسلامي للتنمية" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">منح دراسية من البنك الإسلامي للتنمية
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273389">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/jojo/university-girl.jpg"
+                                                    alt="منح دراسية في الصين" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">منح دراسية في الصين</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273321">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/jojo/techno-girls-youth.jpg"
+                                                    alt="منح دراسية في دولة بروناي" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">منح دراسية في دولة بروناي</h3>
+                                        </a>
+                                    </article>
+
+                                </div>
+
+                            </section>
+                            <section class="dooz-sports" aria-label="رياضة">
+                                <header class="dooz-news-grid__header mt-4">
+                                    <h2 class="dooz-news-grid__title">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/4">رياضة</a>
+                                    </h2>
+                                </header>
+                                <div class="dooz-news-grid__list">
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274007">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Nigeria-3.jpg"
+                                                    alt="نيجيريا تهزم موزمبيق برباعية وتبلغ ربع نهائي كأس أفريقيا"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">نيجيريا تهزم موزمبيق برباعية وتبلغ ربع
+                                                نهائي
+                                                كأس أفريقيا</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274006">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Egypt-3.jpg"
+                                                    alt="مصر تتجاوز بنين بصعوبة وتبلغ ربع نهائي كأس أمم أفريقيا"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">مصر تتجاوز بنين بصعوبة وتبلغ ربع نهائي
+                                                كأس
+                                                أمم
+                                                أفريقيا</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273969">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Africa-Cup-2.jpg"
+                                                    alt="4 منتخبات إلى دور الثمانية لكأس أفريقيا 2025" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">4 منتخبات إلى دور الثمانية لكأس أفريقيا
+                                                2025
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273947">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Morocco-3.jpg"
+                                                    alt="المغرب يهزم تنزانيا ويواصل مشواره في كأس إفريقيا 2025"
+                                                    loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">المغرب يهزم تنزانيا ويواصل مشواره في
+                                                كأس
+                                                إفريقيا 2025</h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273937">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/World-Cup.jpg"
+                                                    alt="ستة أشياء ستكون مختلفة في كأس العالم 2026" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">ستة أشياء ستكون مختلفة في كأس العالم
+                                                2026
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                    <article class="dooz-news-card">
+                                        <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273916">
+                                            <div class="dooz-news-card__media">
+                                                <img class="dooz-news-card__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Ebal-Club-1.jpg"
+                                                    alt="هيئة نادي عيبال تجدد البيعة لفادي عبده ورفاقه" loading="lazy">
+                                            </div>
+                                            <h3 class="dooz-news-card__headline">هيئة نادي عيبال تجدد البيعة لفادي عبده
+                                                ورفاقه
+                                            </h3>
+                                        </a>
+                                    </article>
+
+                                </div>
+
+                            </section>
+
+                            <section class="keytags mt-3 mb-5">
+                                <div class="d-flex flex-wrap justify-content-center gap-2">
+                                    <a class="discover-more text-decoration-none ms-2" href="/topics">
+                                        اكتشاف المزيد
+                                    </a>
+                                    <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                        href="/tag/بنابلس">
+                                        <span class="lightning-icon rounded-circle">
+                                            <i class="fa-solid fa-bolt-lightning"></i>
+                                        </span>
+                                        <span>بنابلس</span>
+                                    </a>
+                                    <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                        href="/tag/نابلس">
+                                        <span class="lightning-icon rounded-circle">
+                                            <i class="fa-solid fa-bolt-lightning"></i>
+                                        </span>
+                                        <span>نابلس</span>
+                                    </a>
+                                    <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                        href="/tag/المسجد الأقصى">
+                                        <span class="lightning-icon rounded-circle">
+                                            <i class="fa-solid fa-bolt-lightning"></i>
+                                        </span>
+                                        <span>الأقصى</span>
+                                    </a>
+                                    <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                        href="/tag/الأقصى">
+                                        <span class="lightning-icon rounded-circle">
+                                            <i class="fa-solid fa-bolt-lightning"></i>
+                                        </span>
+                                        <span>المسجدالأقصى</span>
+                                    </a>
+                                </div>
+
+                            </section>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 col-xl-4 ps-0 pe-0 pe-lg-2 ">
+                        <div class="all-of-news-left-content">
+                            <section class="dooz-mini-cal mx-auto" aria-label="تقويم">
+                                <header class="dooz-news-grid__header">
+                                    <h3 class="dooz-news-grid__title">
+                                        وين أروح بنابلس؟
+                                    </h3>
+                                </header>
+                                <div class="dooz-mini-cal__bar">
+                                    <button class="dooz-mini-cal__nav dooz-mini-cal__nav--next" type="button"
+                                        aria-label="التالي"></button>
+
+                                    <div class="dooz-mini-cal__label">
+                                        <span class="dooz-mini-cal__month" id="calMonth">كانون الثاني</span>
+                                        <span class="dooz-mini-cal__year" id="calYear">2026</span>
+                                    </div>
+
+                                    <button class="dooz-mini-cal__nav dooz-mini-cal__nav--prev" type="button"
+                                        aria-label="السابق"></button>
+                                </div>
+                                <div class="dooz-mini-cal__dow" aria-hidden="true">
+                                    <span>السبت</span><span>الأحد</span><span>الاثنين</span><span>الثلاثاء</span><span>الأربعاء</span><span>الخميس</span><span>الجمعة</span>
+                                </div>
+                                <div class="dooz-mini-cal__grid" id="calGrid"></div>
+                            </section>
+                            <div class="dooz-cal-modal" id="calModal" aria-hidden="true">
+                                <div class="dooz-cal-modal__backdrop" data-close="1"></div>
+
+                                <div class="dooz-cal-modal__dialog" role="dialog" aria-modal="true"
+                                    aria-labelledby="calModalTitle">
+                                    <h4 class="dooz-cal-modal__title" id="calModalTitle">أحداث يوم</h4>
+
+                                    <div class="dooz-cal-modal__body" id="calModalBody"></div>
+
+                                    <button class="dooz-cal-modal__ok" type="button" data-close="1">OK</button>
+                                </div>
+                            </div>
+                            <div class="weather  d-flex justify-content-between align-items-center gap-3 mt-3 ">
+                                <aside class="d-flex flex-column justify-content-center align-items-center pe-3">
+                                    <div class="sun-logo">
+                                        <img src="assests/img/logoes/sun-logo.png" alt="sun logo">
+                                    </div>
+                                    <div class="temperatures d-flex text-center">
+                                        <span class="ms-2">10</span>
+                                        <span class="me-1">/</span>
+                                        <span>19</span>
+                                    </div>
+                                </aside>
+                                <div class="description-of-weather mt-3">
+                                    <p class="fw-bold"> يكون الجو غائماً جزئياً إلى صافٍ وبارداً، خاصة فوق المناطق
+                                        الجبلية، ويطرأ ارتفاع
+                                        آخر على درجات الحرارة، وتتراوح في نابلس بين 19 نهاراً و10 ليلاً. </p>
+                                </div>
+                            </div>
+                            <div class="currencies mt-3">
+                                <div class="currencies-header  d-flex align-items-center">
+                                    <div class="currencies-logo">
+                                        <img src="assests/img/logoes/money.png" alt="currencies picture">
+                                    </div>
+                                    <span class="flex-grow-1 text-center">أسعار العملات</span>
+                                </div>
+                                <div class="currencies-content text-center mt-2">
+                                    <div class="currencies-text d-flex justify-content-around  py-2">
+                                        <div>الدولار الأمريكي</div>
+                                        <div>الدينار الأردني</div>
+                                        <div>اليورو الأوروبي</div>
+                                    </div>
+                                    <div class="currencies-text d-flex justify-content-around py-2">
+                                        <div>3.17</div>
+                                        <div>4.47</div>
+                                        <div>3.70</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="adv-banner-under-currencies my-4">
+                                <a href="https://www.dooz.ps/" target="_blank" rel="noopener noreferrer sponsored"
+                                    class="d-block overflow-hidden shadow-sm text-decoration-none">
+
+
+                                    <img src="https://www.dooz.ps/wp-content/uploads/Ads/dooz-werbung-1.jpg"
+                                        alt="إعلان موقع دوز" class="img-fluid w-100" loading="lazy" decoding="async">
+                                </a>
+
+                            </div>
+                            <div class="community-slider">
+                                <header class="dooz-news-grid__header mb-2">
+                                    <h2 class="dooz-news-grid__title text-center ">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/6">مجتمع</a>
+                                    </h2>
+                                </header>
+                                <!-- Swiper -->
+                                <div class="doozsmallswiperleft swiper overflow-hidden" aria-label="Top Stories Slider">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274000">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/high-angle-shot-cityscape-with-lot-concrete-buildings-beautiful-cloudy-sky.jpg"
+                                                    alt="البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات المؤجلة"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات
+                                                    المؤجلة
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273699">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Places/jisr-travel-boarder-karamah.jpg"
+                                                    alt="المعابر والحدود تعتمد جدول سفر للعطلة المدرسية"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    المعابر والحدود تعتمد جدول سفر للعطلة المدرسية
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273627">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/Belbeisi-3.jpg"
+                                                    alt="المركز الوطني للتأهيل يحذر من تصاعد تعاطي المخدرات"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    المركز الوطني للتأهيل يحذر من تصاعد تعاطي المخدرات
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 4 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273613">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Daily_USE/bridge-jor-pal.jpg"
+                                                    alt="معبر الكرامة تحت المجهر: تراخيص استثنائية واحتكار برعاية رسمية"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    معبر الكرامة تحت المجهر: تراخيص استثنائية واحتكار برعاية رسمية
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 5 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273087">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Daily_USE/israel-money2345678.jpg"
+                                                    alt="مؤسسة التمكين الاقتصادي تؤكد التزامها بتطبيق قانون الرعاية الاجتماعية"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    مؤسسة التمكين الاقتصادي تؤكد التزامها بتطبيق قانون الرعاية
+                                                    الاجتماعية
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 6 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273073">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/Al-Khalili-5.jpg"
+                                                    alt="إطلاق الجيل الثالث من الخطة الوطنية حول المرأة"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    إطلاق الجيل الثالث من الخطة الوطنية حول المرأة
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 7 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273070">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/high-angle-shot-cityscape-with-lot-concrete-buildings-beautiful-cloudy-sky.jpg"
+                                                    alt="البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات المؤجلة"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات
+                                                    المؤجلة
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 8 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/272942">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/Family-recovery.jpg"
+                                                    alt="إنعاش الأسرة تكثف حملاتها الإنسانية في غزة والضفة"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    إنعاش الأسرة تكثف حملاتها الإنسانية في غزة والضفة
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 9 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/272886">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/Palestinian%20Government-(AFD).png"
+                                                    alt="فلسطين وفرنسا توقعان دعماً بـ20 مليون يورو لمياه جنين"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    فلسطين وفرنسا توقعان دعماً بـ20 مليون يورو لمياه جنين
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 10 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/272853">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/sensual-photo-cute-little-girl-people-walks-outside-woman-brown-coat.jpg"
+                                                    alt="بين معلمي الظل وأمهات الحب.. صرخة فلسطينيات لحماية الأطفال ذوي الهمم"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    بين معلمي الظل وأمهات الحب.. صرخة فلسطينيات لحماية الأطفال ذوي الهمم
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="swiper-pagination"></div>
+
+                                    <!-- Navigation -->
+                                    <button class="swiper-button-prev" type="button" aria-label="السابق"><i
+                                            class="fa-solid fa-angle-right"></i></button>
+                                    <button class="swiper-button-next" type="button" aria-label="التالي"><i
+                                            class="fa-solid fa-angle-left"></i></button>
+                                </div>
+
+
+
+                            </div>
+                            <section class="keytags keytagsleft my-3">
+                                <header class="dooz-news-grid__header py-1">
+                                    <h2 class="dooz-news-grid__title text-center ">
+                                        <a class="dooz-news-grid__titleLink" href=""></a>
+                                    </h2>
+                                </header>
+                                <div
+                                    class="keytags-content d-flex justify-content-center flex-wrap gap-2 gap-lg-0 d-lg-block">
+                                    <div
+                                        class="first-keytags-row d-flex justify-content-center align-items-center flex-wrap gap-3 mb-0 mb-lg-2">
+                                        <a class="discover-more text-decoration-none ms-2" href="/topics">
+                                            اكتشاف المزيد
+                                        </a>
+                                        <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                            href="/tag/بنابلس">
+                                            <span class="lightning-icon rounded-circle">
+                                                <i class="fa-solid fa-bolt-lightning"></i>
+                                            </span>
+                                            <span>بنابلس</span>
+                                        </a>
+                                        <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                            href="/tag/نابلس">
+                                            <span class="lightning-icon rounded-circle">
+                                                <i class="fa-solid fa-bolt-lightning"></i>
+                                            </span>
+                                            <span>نابلس</span>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="secound-keytags-row d-flex justify-content-center align-items-center flex-wrap gap-2">
+                                        <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                            href="/tag/المسجد الأقصى">
+                                            <span class="lightning-icon rounded-circle">
+                                                <i class="fa-solid fa-bolt-lightning"></i>
+                                            </span>
+                                            <span>الأقصى</span>
+                                        </a>
+                                        <a class="text-decoration-none badge text-bg-light border rounded-pill px-3 py-2 text-primary fw-semibold"
+                                            href="/tag/الأقصى">
+                                            <span class="lightning-icon rounded-circle">
+                                                <i class="fa-solid fa-bolt-lightning"></i>
+                                            </span>
+                                            <span>المسجدالأقصى</span>
+                                        </a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </section>
+                            <div class="youth-and-university-slider my-3">
+                                <header class="dooz-news-grid__header mb-2">
+                                    <h2 class="dooz-news-grid__title text-center">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/5">شباب
+                                            وجامعة</a>
+                                    </h2>
+                                </header>
+                                <!-- Swiper -->
+                                <div class="doozsmallswiperleft swiper overflow-hidden" aria-label="Top Stories Slider">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274105">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2021/01/wezaratalem32.jpg"
+                                                    alt="التعليم العالي تطلق المسابقات الثقافية المشتركة لطلبة الجامعات والكليات"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    التعليم العالي تطلق المسابقات الثقافية المشتركة لطلبة الجامعات
+                                                    والكليات
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274056">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Birzeit-University.jpg"
+                                                    alt="جامعة بيرزيت تدين اقتحام الجيش حرمها الجامعي" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    جامعة بيرزيت تدين اقتحام الجيش حرمها الجامعي
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273876">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Kadoorie.jpg"
+                                                    alt="إطلاق المرحلة الثالثة من أولمبياد الرياضيات الفلسطيني للعام 2026"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    إطلاق المرحلة الثالثة من أولمبياد الرياضيات الفلسطيني للعام 2026
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 4 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273701">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/Awartani-Al-Dweik-Barham-Al-Sharbaty.jpg"
+                                                    alt="ثلاث اتفاقيات تعاون لتعزيز حفظ الذاكرة الوطنية في الخليل "
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    ثلاث اتفاقيات تعاون لتعزيز حفظ الذاكرة الوطنية في الخليل
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 5 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273685">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/jojo/techno-girls-youth.jpg"
+                                                    alt="منح دراسية من البنك الإسلامي للتنمية" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    منح دراسية من البنك الإسلامي للتنمية
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 6 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273389">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/jojo/university-girl.jpg"
+                                                    alt="منح دراسية في الصين" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    منح دراسية في الصين
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="swiper-pagination"></div>
+
+                                    <!-- Navigation -->
+                                    <button class="swiper-button-prev" type="button" aria-label="السابق">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </button>
+                                    <button class="swiper-button-next" type="button" aria-label="التالي">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </button>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="official-speaks-slider my-3">
+                                <header class="dooz-news-grid__header mb-2">
+                                    <h2 class="dooz-news-grid__title text-center">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/9">مسؤول
+                                            بحكي</a>
+                                    </h2>
+                                </header>
+                                <!-- Swiper -->
+                                <div class="doozsmallswiperleft swiper overflow-hidden" aria-label="Top Stories Slider">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/233648">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2024/04/Badhan-Waterfall.jpg"
+                                                    alt="فيديو: انخفاض نسبة زوار الباذان في نابلس" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    فيديو: انخفاض نسبة زوار الباذان في نابلس
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/223173">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2023/11/Jordanian-Hospital.jpg"
+                                                    alt="جولة في المستشفى الميداني الأردني في نابلس" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    جولة في المستشفى الميداني الأردني في نابلس
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/217766">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2023/08/hamdalla-afani-0.jpg"
+                                                    alt="طولكرم - مشاريع وزارة الثقافة الهادفة لتعزيز القراءة "
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    طولكرم - مشاريع وزارة الثقافة الهادفة لتعزيز القراءة
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 4 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/217631">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2023/07/hamdalla-afani-0.jpg"
+                                                    alt="كيف تساهم وزارة الثقافة بالعمل الثقافي بالمخيمات الصيفية؟ "
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    كيف تساهم وزارة الثقافة بالعمل الثقافي بالمخيمات الصيفية؟
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 5 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/217422">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2023/07/rageb-abu-diak-09.jpg"
+                                                    alt="أبو دياك متحدثاً عن اجتماع متابعة الأضرار في نورشمس"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    أبو دياك متحدثاً عن اجتماع متابعة الأضرار في نورشمس
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="swiper-pagination"></div>
+
+                                    <!-- Navigation -->
+                                    <button class="swiper-button-prev" type="button" aria-label="السابق">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </button>
+                                    <button class="swiper-button-next" type="button" aria-label="التالي">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </button>
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="economy-slider my-3">
+                                <header class="dooz-news-grid__header mb-2">
+                                    <h2 class="dooz-news-grid__title text-center">
+                                        <a class="dooz-news-grid__titleLink"
+                                            href="https://www.dooz.ps/cat/10">اقتصاد</a>
+                                    </h2>
+                                </header>
+                                <!-- Swiper -->
+                                <div class="doozsmallswiperleft swiper overflow-hidden" aria-label="Top Stories Slider">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274116">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Daily_USE/money-payment.jpg"
+                                                    alt="أسعار صرف العملات" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    أسعار صرف العملات
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274081">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/10/gold-2.jpg"
+                                                    alt="انخفاض أسعار الذهب والنفط عالمياً" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    انخفاض أسعار الذهب والنفط عالمياً
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274077">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/10/Money-1.jpg"
+                                                    alt="إسرائيل تصادر 149 مليون شيكل من أموال السلطة الفلسطينية"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    إسرائيل تصادر 149 مليون شيكل من أموال السلطة الفلسطينية
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 4 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274075">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/Things/ooredo.jpg"
+                                                    alt="التحكيم الدولي يصدر قراره النهائي بشأن النزاع المالي بين الحكومة وأوريدو"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    التحكيم الدولي يصدر قراره النهائي بشأن النزاع المالي بين الحكومة
+                                                    وأوريدو
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 5 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274074">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Trump-2.jpg"
+                                                    alt="ترامب يعلن استلام أمريكا نفطاً من فنزويلا" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    ترامب يعلن استلام أمريكا نفطاً من فنزويلا
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="swiper-pagination"></div>
+
+                                    <!-- Navigation -->
+                                    <button class="swiper-button-prev" type="button" aria-label="السابق">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </button>
+                                    <button class="swiper-button-next" type="button" aria-label="التالي">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="miscellaneous-slider my-3">
+                                <header class="dooz-news-grid__header mb-2">
+                                    <h2 class="dooz-news-grid__title text-center">
+                                        <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/8">منوعات</a>
+                                    </h2>
+                                </header>
+                                <!-- Swiper -->
+                                <div class="doozsmallswiperleft swiper overflow-hidden" aria-label="Top Stories Slider">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/274107">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/child.jpg"
+                                                    alt="مصر تسحب حليب أطفال ملوث بـ" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    مصر تسحب حليب أطفال ملوث بـ"السيروليد"
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273959">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/first-human-1.jpg"
+                                                    alt="دراسة جديدة تعيد كتابة قصة الإنسان الأول" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    دراسة جديدة تعيد كتابة قصة الإنسان الأول
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273836">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Mickey-Zohar.jpg"
+                                                    alt="وزير الثقافة الإسرائيلي: القطاع والضفة لنا والفلسطينيون ضيوف"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    وزير الثقافة الإسرائيلي: القطاع والضفة لنا والفلسطينيون ضيوف
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 4 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273829">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2023/03/Supplements.jpg"
+                                                    alt="طبيب يكشف أفضل مكمل غذائي لتحسين المزاج ودعم الصحة النفسية"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    طبيب يكشف أفضل مكمل غذائي لتحسين المزاج ودعم الصحة النفسية
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 5 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273808">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/animals/eggs-483.jpg"
+                                                    alt="السلق أم القلي.. ما أفضل طريقة لطهي البيض؟" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    السلق أم القلي.. ما أفضل طريقة لطهي البيض؟
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 6 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273802">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2026/01/Fast-food-1.jpg"
+                                                    alt="دراسة جديدة تكشف أضرار الأطعمة الجاهزة على القلب"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    دراسة جديدة تكشف أضرار الأطعمة الجاهزة على القلب
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 7 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273758">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/2026.jpg"
+                                                    alt="نصائح وأفكار تجعل أهدافك لعام 2026 واقعاً ملموساً"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    نصائح وأفكار تجعل أهدافك لعام 2026 واقعاً ملموساً
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 8 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273743">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/Garlic-2.jpg"
+                                                    alt="ماذا يحدث لأعراض الزكام عند تناول الثوم بانتظام؟"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    ماذا يحدث لأعراض الزكام عند تناول الثوم بانتظام؟
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 9 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273634">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/kitchen.jpg"
+                                                    alt="ترك الصحون منقوعة ليلاً بالمطبخ.. أخطر مما تتصور"
+                                                    loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    ترك الصحون منقوعة ليلاً بالمطبخ.. أخطر مما تتصور
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Slide 10 -->
+                                        <div class="swiper-slide">
+                                            <a class="doozsmallswiperleft__link" href="https://www.dooz.ps/p/273629">
+                                                <img class="doozsmallswiperleft__img"
+                                                    src="https://www.dooz.ps/wp-content/uploads/2025/12/soup-33.jpg"
+                                                    alt="أطعمة صحية تساعد على التعافي من" loading="lazy" />
+                                                <div class="doozsmallswiperleft__caption">
+                                                    أطعمة صحية تساعد على التعافي من "الإنفلونزا الخارقة"
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="swiper-pagination"></div>
+
+                                    <!-- Navigation -->
+                                    <button class="swiper-button-prev" type="button" aria-label="السابق">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </button>
+                                    <button class="swiper-button-next" type="button" aria-label="التالي">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </button>
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                            <div class="gif-adv my-4">
+                                <a href="https://goo.gl/p2YsMT" type="_blank">
+                                    <img src="assests/img/logoes/dooz-app-ad.gif" alt="dooz adv gif">
+                                </a>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="down-news-all-screen-down">
+                    <section class="arts-and-culture mb-4">
+                        <header class="dooz-news-grid__header">
+                            <h2 class="dooz-news-grid__title">
+                                <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/7">فن وثقافة</a>
+                            </h2>
+                        </header>
+                        <div class="dooz-news-grid__list">
+                            <!-- Card 1 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274060">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/Egypt.jpg"
+                                            alt="معتقدات المصريين القدامى وسر موقع بناء معبد الكرنك" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">معتقدات المصريين القدامى وسر موقع بناء معبد
+                                        الكرنك</h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 2 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274044">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/Imad-Hamdan.jpg"
+                                            alt="وزير الثقافة يبحث مع مدير مركز رواق للمعمار الشعبي التعاون المشترك"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">وزير الثقافة يبحث مع مدير مركز رواق للمعمار
+                                        الشعبي التعاون المشترك</h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 3 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273925">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/Minister-Culture.jpg"
+                                            alt="وزير الثقافة يكرّم الفائزين بالجوائز الأدبية لعام 2025" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">وزير الثقافة يكرّم الفائزين بالجوائز الأدبية
+                                        لعام 2025</h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 4 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273762">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/Suleiman-Mansour.jpg"
+                                            alt="سليمان منصور يتوج بلقب فنان العام 2024–2025 بروسيا" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">سليمان منصور يتوج بلقب فنان العام 2024–2025
+                                        بروسيا</h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 5 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273519">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/Fadi Abu Khalil.jpg"
+                                            alt="رحيل فادي أبو خليل: الاستثنائي المعتزل غير قابل للنسيان"
+                                            loading="lazy">
+
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">رحيل فادي أبو خليل: الاستثنائي المعتزل غير قابل
+                                        للنسيان</h3>
+                                </a>
+                            </article>
+                        </div>
+
+
+                    </section>
+                    <section class="community mb-4">
+                        <header class="dooz-news-grid__header">
+                            <h2 class="dooz-news-grid__title">
+                                <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/6">مجتمع</a>
+                            </h2>
+                        </header>
+                        <div class="dooz-news-grid__list">
+                            <!-- Card 1 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274000">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/high-angle-shot-cityscape-with-lot-concrete-buildings-beautiful-cloudy-sky.jpg"
+                                            alt="البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات المؤجلة"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات المؤجلة
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 2 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273699">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/Places/jisr-travel-boarder-karamah.jpg"
+                                            alt="المعابر والحدود تعتمد جدول سفر للعطلة المدرسية" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        المعابر والحدود تعتمد جدول سفر للعطلة المدرسية
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 3 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273627">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/Belbeisi-3.jpg"
+                                            alt="المركز الوطني للتأهيل يحذر من تصاعد تعاطي المخدرات" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        المركز الوطني للتأهيل يحذر من تصاعد تعاطي المخدرات
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 4 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273613">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/Daily_USE/bridge-jor-pal.jpg"
+                                            alt="معبر الكرامة تحت المجهر: تراخيص استثنائية واحتكار برعاية رسمية"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        معبر الكرامة تحت المجهر: تراخيص استثنائية واحتكار برعاية رسمية
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 5 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273087">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/Daily_USE/israel-money2345678.jpg"
+                                            alt="مؤسسة التمكين الاقتصادي تؤكد التزامها بتطبيق قانون الرعاية الاجتماعية"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        مؤسسة التمكين الاقتصادي تؤكد التزامها بتطبيق قانون الرعاية الاجتماعية
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 6 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273073">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/Al-Khalili-5.jpg"
+                                            alt="إطلاق الجيل الثالث من الخطة الوطنية حول المرأة" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        إطلاق الجيل الثالث من الخطة الوطنية حول المرأة
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 7 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273070">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/high-angle-shot-cityscape-with-lot-concrete-buildings-beautiful-cloudy-sky.jpg"
+                                            alt="البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات المؤجلة"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        البلديات الفلسطينية: عندما تصبح الرواتب والخدمات رهينة الميزانيات المؤجلة
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 8 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/272942">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/Family-recovery.jpg"
+                                            alt="إنعاش الأسرة تكثف حملاتها الإنسانية في غزة والضفة" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        «إنعاش الأسرة» تكثف حملاتها الإنسانية في غزة والضفة
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 9 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/272886">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/Palestinian Government-(AFD).png"
+                                            alt="فلسطين وفرنسا توقعان دعماً بـ20 مليون يورو لمياه جنين" loading="lazy">
+
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        فلسطين وفرنسا توقعان دعماً بـ20 مليون يورو لمياه جنين
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 10 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/272853">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/sensual-photo-cute-little-girl-people-walks-outside-woman-brown-coat.jpg"
+                                            alt="بين معلمي الظل وأمهات الحب.. صرخة فلسطينيات لحماية الأطفال ذوي الهمم"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        بين معلمي الظل وأمهات الحب.. صرخة فلسطينيات لحماية الأطفال ذوي الهمم
+                                    </h3>
+                                </a>
+                            </article>
+                        </div>
+
+                    </section>
+                    <section class="official-speaks mb-4">
+                        <header class="dooz-news-grid__header">
+                            <h2 class="dooz-news-grid__title">
+                                <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/9">مسؤول بحكي</a>
+                            </h2>
+                        </header>
+                        <div class="dooz-news-grid__list">
+                            <!-- Card 1 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/233648">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2024/04/Badhan-Waterfall.jpg"
+                                            alt="فيديو: انخفاض نسبة زوار الباذان في نابلس" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        فيديو: انخفاض نسبة زوار الباذان في نابلس
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 2 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/223173">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2023/11/Jordanian-Hospital.jpg"
+                                            alt="جولة في المستشفى الميداني الأردني في نابلس" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        جولة في المستشفى الميداني الأردني في نابلس
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 3 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/217766">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2023/08/hamdalla-afani-0.jpg"
+                                            alt="طولكرم - مشاريع وزارة الثقافة الهادفة لتعزيز القراءة" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        طولكرم - مشاريع وزارة الثقافة الهادفة لتعزيز القراءة
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 4 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/217631">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2023/07/hamdalla-afani-0.jpg"
+                                            alt="كيف تساهم وزارة الثقافة بالعمل الثقافي بالمخيمات الصيفية؟"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        كيف تساهم وزارة الثقافة بالعمل الثقافي بالمخيمات الصيفية؟
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 5 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/217422">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2023/07/rageb-abu-diak-09.jpg"
+                                            alt="أبو دياك متحدثاً عن اجتماع متابعة الأضرار في نورشمس" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        أبو دياك متحدثاً عن اجتماع متابعة الأضرار في نورشمس
+                                    </h3>
+                                </a>
+                            </article>
+                        </div>
+
+                    </section>
+                    <section class="miscellaneous mb-4">
+                        <header class="dooz-news-grid__header">
+                            <h2 class="dooz-news-grid__title">
+                                <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/8">منوعات</a>
+                            </h2>
+                        </header>
+                        <div class="dooz-news-grid__list">
+                            <!-- Card 1 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273959">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/first-human-1.jpg"
+                                            alt="دراسة جديدة تعيد كتابة قصة الإنسان الأول" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        دراسة جديدة تعيد كتابة قصة الإنسان الأول
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 2 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273836">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/Mickey-Zohar.jpg"
+                                            alt="وزير الثقافة الإسرائيلي: القطاع والضفة لنا والفلسطينيون ضيوف"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        وزير الثقافة الإسرائيلي: القطاع والضفة لنا والفلسطينيون ضيوف
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 3 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273829">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2023/03/Supplements.jpg"
+                                            alt="طبيب يكشف أفضل مكمل غذائي لتحسين المزاج ودعم الصحة النفسية"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        طبيب يكشف أفضل مكمل غذائي لتحسين المزاج ودعم الصحة النفسية
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 4 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273808">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/animals/eggs-483.jpg"
+                                            alt="السلق أم القلي.. ما أفضل طريقة لطهي البيض؟" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        السلق أم القلي.. ما أفضل طريقة لطهي البيض؟
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 5 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273802">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/Fast-food-1.jpg"
+                                            alt="دراسة جديدة تكشف أضرار الأطعمة الجاهزة على القلب" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        دراسة جديدة تكشف أضرار الأطعمة الجاهزة على القلب
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 6 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273758">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/2026.jpg"
+                                            alt="نصائح وأفكار تجعل أهدافك لعام 2026 واقعاً ملموساً" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        نصائح وأفكار تجعل أهدافك لعام 2026 واقعاً ملموساً
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 7 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273743">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/Garlic-2.jpg"
+                                            alt="ماذا يحدث لأعراض الزكام عند تناول الثوم بانتظام؟" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        ماذا يحدث لأعراض الزكام عند تناول الثوم بانتظام؟
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 8 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273634">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/kitchen.jpg"
+                                            alt="ترك الصحون منقوعة ليلاً بالمطبخ.. أخطر مما تتصور" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        ترك الصحون منقوعة ليلاً بالمطبخ.. أخطر مما تتصور
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 9 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273629">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2025/12/soup-33.jpg"
+                                            alt="أطعمة صحية تساعد على التعافي من الإنفلونزا الخارقة" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        أطعمة صحية تساعد على التعافي من «الإنفلونزا الخارقة»
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 10 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/273583">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2024/06/Headache-2.jpg"
+                                            alt="سرّ الأرق الليلي… دراسة تكشف لماذا نستيقظ فجأة" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        سرّ الأرق الليلي… دراسة تكشف لماذا نستيقظ فجأة
+                                    </h3>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                    <secction class="economy">
+                        <header class="dooz-news-grid__header">
+                            <h2 class="dooz-news-grid__title">
+                                <a class="dooz-news-grid__titleLink" href="https://www.dooz.ps/cat/10">اقتصاد</a>
+                            </h2>
+                        </header>
+                        <div class="dooz-news-grid__list">
+                            <!-- Card 1 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274075">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/Things/ooredo.jpg"
+                                            alt="التحكيم الدولي يصدر قراره النهائي بشأن النزاع المالي بين الحكومة وأوريدو"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        التحكيم الدولي يصدر قراره النهائي بشأن النزاع المالي بين الحكومة وأوريدو
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 2 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274074">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/Trump-2.jpg"
+                                            alt="ترامب يعلن استلام أمريكا نفطاً من فنزويلا" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        ترامب يعلن استلام أمريكا نفطاً من فنزويلا
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 3 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274065">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/Daily_USE/water.jpg"
+                                            alt="بلدية نابلس: جدول توزيع المياه" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        بلدية نابلس: جدول توزيع المياه
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 4 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274063">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/Daily_USE/Israeli-shekel-4.png"
+                                            alt="أسعار صرف العملات" loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        أسعار صرف العملات
+                                    </h3>
+                                </a>
+                            </article>
+
+                            <!-- Card 5 -->
+                            <article class="dooz-news-card">
+                                <a class="dooz-news-card__link" href="https://www.dooz.ps/p/274036">
+                                    <div class="dooz-news-card__media">
+                                        <img class="dooz-news-card__img"
+                                            src="https://www.dooz.ps/wp-content/uploads/2026/01/Nablus-5.jpg"
+                                            alt="غرفة نابلس تبحث آفاق التعاون مع القنصل البلجيكي في فلسطين"
+                                            loading="lazy">
+                                    </div>
+                                    <h3 class="dooz-news-card__headline">
+                                        غرفة نابلس تبحث آفاق التعاون مع القنصل البلجيكي في فلسطين
+                                    </h3>
+                                </a>
+                            </article>
+                        </div>
+
+                    </secction>
+
+                </section>
+                <div class="big-advertisement-before-footer">
+                    <a class="adv-ban" href="https://example.com" target="_blank" rel="noopener noreferrer sponsored"
+                        aria-label="إعلان">
+
+                        <span class="adv-ban__tag">إعلان</span>
+
+                        <img class="adv-ban__img"
+                            src="https://tpc.googlesyndication.com/daca_images/simgad/1596542183825838480"
+                            alt="وصف الإعلان هنا" loading="lazy" decoding="async">
+                    </a>
+
+                </div>
+
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid container-md px-md-0 p-4">
+            <div class="logo">
+                <a href="#">
+                    <img src="assests/img/logoes/logowithword.png" alt="logo of dooz">
+                </a>
+            </div>
+            <div class="icons-of-social-media mt-4 d-flex justify-content-center align-items-center gap-3">
+                <a href="https://www.facebook.com/Dooz.News"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/dooznablus"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCGSUJEes_AwVnhDsqa-Mi_w"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/dooznablus/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://soundcloud.com/golocal" class="text-decoration-underline"><i
+                        class="fa-brands fa-soundcloud"></i></a>
+            </div>
+            <h6 class="my-3">دوز</h6>
+        </div>
+        <div class="copyright">
+            <div class="container-fluid container-md px-md-0">
+                جميع الحقوق محفوظة لدى دوز 2026 &copy; Nabil Dawud
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <!-- <script src="node_modules/swiper/swiper-bundle.min.js"></script> -->
+     <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+     <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assests/js/main.js"></script>
+
+    <!-- Facebook SDK (آخر شي) -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: "v19.0"
+            });
+        };
+    </script>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js">
+    </script>
+
+</body>
+
+</html>
